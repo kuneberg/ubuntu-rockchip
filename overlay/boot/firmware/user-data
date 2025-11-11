@@ -26,10 +26,10 @@ users:
 # On first boot, set the (default) ubuntu user's password to "ubuntu" and
 # expire user passwords
 chpasswd:
-  expire: true
+  expire: false
   users:
   - name: ubuntu
-    password: ubuntu
+    password: ubuntu1234
     type: text
 
 ## Set the system's hostname. Please note that, unless you have a local DNS
@@ -75,11 +75,21 @@ ssh_pwauth: true
 #  passwd: $5$hkui88$nvZgIle31cNpryjRfO9uArF7DYiBcWEnjqq7L1AQNN3
 
 ## Update apt database and upgrade packages on first boot
-#package_update: true
+package_update: true
 #package_upgrade: true
 
 ## Install additional packages on first boot
-#packages:
+packages:
+  - dpkg-dev 
+  - debhelper 
+  - cpio
+  - flex
+  - bison
+  - bc
+  - openssl
+  - libssl-dev
+  - libelf-dev
+  - python3
 #- avahi-daemon
 #- rng-tools
 #- python3-gpiozero
