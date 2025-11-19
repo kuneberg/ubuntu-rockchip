@@ -2,7 +2,7 @@
 
 # --- Configuration Variables ---
 REMOTE_USER="ubuntu"
-REMOTE_HOST="192.168.68.65"
+REMOTE_HOST="192.168.68.67"
 ARCHIVE_NAME="lockbox.ssh.tar.gz" # Archive name must match the backup script
 REMOTE_TEMP_PATH="/tmp/${ARCHIVE_NAME}"
 LOCAL_ARCHIVE_PATH="./${ARCHIVE_NAME}"

@@ -2,7 +2,7 @@
 
 # --- Configuration Variables ---
 REMOTE_USER="ubuntu"
-REMOTE_HOST="192.168.68.65"
+REMOTE_HOST="192.168.68.67"
 ARCHIVE_NAME="ubuntu-rockchip.tar.gz"
 LOCAL_ARCHIVE_PATH="./${ARCHIVE_NAME}"
 # This is the directory where the archive is initially placed on the remote host (e.g., /home/ubuntu/)

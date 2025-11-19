@@ -1,0 +1,24 @@
+services:
+
+    lockbox-db:
+        image: mongo:noble
+        pull_policy: always
+        restart: unless-stopped
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: lockboxusr
+            MONGO_INITDB_ROOT_PASSWORD: lockboxpwd
+        ports:
+            - "27017:27017"
+        volumes:
+            - './data:/data/db'
+
+    # lockbox-backend:
+    #     image: 597226392736.dkr.ecr.eu-north-1.amazonaws.com/memoresse/memories-service:latest
+    #     pull_policy: always
+    #     restart: unless-stopped
+    #     ports:
+    #         - "8084:8084"
+    #     volumes:
+    #         - ./application-config.json:/memories/application-config.json
+    #         - './files:/memories/files'
+    #         - './temp:/memories/temp'
